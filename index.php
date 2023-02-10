@@ -8,8 +8,23 @@
     <link rel="stylesheet" href="css.css">
 </head>
 <body>
+<?php
+    ini_set('display_errors',0);
+    $giatla = $_POST["check_giatla"];
+    $ansang = $_POST["check_ansang"];
+    $tamhoi = $_POST["check_tamhoi"];
+    $meal_money = $_POST["eatmoney"];
+    $type = $_POST["phong"];
+    $check_in = strtotime( $_POST["check_in"]);
+    $check_out = strtotime($_POST["check_out"]); 
+    $date = abs($checkout- $checkin)  ;
+    $ngaytra = floor($date / (60*60*24)) * $type;
+    $service = $giatla + $ansang + $tamhoi;
+    $tatol = $meal + $service + $type + $ngaytra
+
+?>
     <center>
-    <form action="tinhtien.php" method="post" class="form1">
+    <form action="index.php" method="post" class="form1">
         <table class="table">
             <tr class="tt">
                 <td colspan="3"><span align="center">TÍNH TIỀN</span></td>
@@ -61,15 +76,23 @@
         
             <tr>
 
-                <td><input type="submit"></td>
-                <td><button>cancle</button>
+                <td><button type="submit">Tính</button></td>
+                <td><button type="cancle">cancle</button>
             </tr>
         </table>
        <br>
-        
-       
+
     </form>
     </center>
+
+    <h2 class="bill">BILL</h2>
+    <form class="input-bill" action="index.php" style="margin-left: 300px;" method="post">
+        TypeRoom: <input type="text" value="<?php echo $type ?>"> <br> <br>
+        Rental hours: <input type="text" value="<?php echo $ngaytra?>"> <br> <br>
+        Money for meals: <input type="text" value="<?php echo $meal_money ?>"> <br> <br>
+        Money for service: <input type="text" value="<?php echo $service ?>"> <br> <br>
+        Total: <input type="text" value="<?php echo $tatol?>"> <br> <br>
+    </form
     
 </body>
 </html>
