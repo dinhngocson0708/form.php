@@ -20,9 +20,9 @@
                 <td>
                 <select name="phong">
                         <option value="">Chọn phòng</option>
-                        <option value="A">Loại A</option>
-                        <option value="B">Loại B</option>
-                        <option value="C">Loại C</option>
+                        <option value="1000">Loại A</option>
+                        <option value="800">Loại B</option>
+                        <option value="500">Loại C</option>
                     </select> 
                 </td>
                 </label>
@@ -51,9 +51,9 @@
             <tr>
                 <td><span>Dịch vụ:</span></td>
                 <label for="">
-                <td> Giặt là <input type="checkbox" name="check_html" value="HTML"> <br>
-                    Ăn sáng <input type="checkbox" name="check_css" value="CSS"> <br>
-                    Tắm hơi <input type="checkbox" name="check_css" value="CSS"></td>
+                <td> Giặt là <input type="checkbox" name="check_giatla" value="30000"> <br>
+                    Ăn sáng <input type="checkbox" name="check_ansang" value="500"> <br>
+                    Tắm hơi <input type="checkbox" name="check_tamhoi" value="300"></td>
                 </td>
                 </label>
                 
