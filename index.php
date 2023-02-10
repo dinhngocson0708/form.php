@@ -9,7 +9,7 @@
 </head>
 <body>
     <center>
-    <form action="tinhTien.php" method="post" class="form1">
+    <form action="tinhtien.php" method="post" class="form1">
         <table class="table">
             <tr class="tt">
                 <td colspan="3"><span align="center">TÍNH TIỀN</span></td>
